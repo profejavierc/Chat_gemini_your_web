@@ -1,5 +1,5 @@
 # Chat_gemini_your_web
-Create a question line to Gemini 1.0 on your own local page and with 3 files, using xampp 8.2
+Create a question line to Gemini 1.0 on your own local page and with 3 files, using xampp 8.2 https://www.apachefriends.org/es/download.html
 1) Project Structure: The project consists of three main files:
  index.php (Frontend)
  script.js (JavaScript to handle interactions)
