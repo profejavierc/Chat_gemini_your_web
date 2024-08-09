@@ -1,8 +1,8 @@
 <?php
 // Configura tu clave API
-$api_key = 'AIzaSyCmmM2OPmB5uX_nEg5woNOB-KVXx_WpRq0';
+$api_key = 'YOUR APIkey taken from: https://ai.google.dev/gemini-api';
 
-// Obtén la entrada del frontend
+// ObtÃ©n la entrada del frontend
 $data = json_decode(file_get_contents('php://input'), true);
 $text = $data['text'];
 
@@ -33,7 +33,7 @@ curl_setopt_array($curl, [
     ]
 ]);
 
-// Envía la solicitud y obtén la respuesta
+// EnvÃ­a la solicitud y obtÃ©n la respuesta
 $response = curl_exec($curl);
 
 // Verifica si hubo errores
@@ -47,9 +47,9 @@ if (curl_errno($curl)) {
     if (isset($result['candidates'][0]['content']['parts'][0]['text'])) {
         echo $result['candidates'][0]['content']['parts'][0]['text'];
     } else {
-        echo 'No se pudo obtener una respuesta válida de la API.';
+        echo 'No se pudo obtener una respuesta vÃ¡lida de la API.';
     }
 }
 
-// Cierra la conexión cURL
+// Cierra la conexiÃ³n cURL
 curl_close($curl);
